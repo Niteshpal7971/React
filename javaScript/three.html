@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: azure;">
+    <ul class="language">
+        <li>
+            Javascript
+        </li>
+    </ul>
+</body>
+<script>
+
+    // Adding Element
+
+    function addLanguage(langName){
+        const li = document.createElement("li");
+        li.innerHTML=`${langName}`;
+        ul = document.querySelector("ul");
+        ul.appendChild(li);
+    };
+    addLanguage("Java")
+
+    //optimized way to add Element
+
+    function addOptiLanguage(langName){
+        const li = document.createElement("li");
+        li.append(document.createTextNode(langName));
+        document.querySelector(".language").append(li);
+    }
+    addOptiLanguage("Golang")
+    addOptiLanguage("typeScript")
+
+    //Edit DOM Elements
+    //1st & 2nd Edit Dom
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+    // secondLang.innerHTML = "python"
+    const newLi = document.createElement("li");
+    newLi.textContent = "python"
+    secondLang.replaceWith(newLi)
+
+    // 3rd Method
+
+    const thirdLang = document.querySelector("li:first-child");
+    thirdLang.outerHTML = "<li> c++ </li>"
+
+
+    // Remove DOM element
+
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove("li");
+    console.log(lastLang)
+
+</script>
+</html>

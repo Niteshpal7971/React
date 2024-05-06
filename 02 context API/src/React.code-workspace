@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../LMS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "React"
+	}
+}
